@@ -65,18 +65,51 @@ __attribute__((annotate("returns_localized_nsstring"))) static inline NSString *
 }
 
 + (instancetype)wmf_placesActivityWithURL:(NSURL *)activityURL {
+    NSUserActivity *activity = [self wmf_pageActivityWithName:@"Places"];
+    
     NSURLComponents *components = [NSURLComponents componentsWithURL:activityURL resolvingAgainstBaseURL:NO];
+    
+    if ([self canPlacesActivityHandleArticle:activity :components]) {
+        // Do something additional if needed
+    }
+    else if ([self canPlacesActivityHandleLocation:activity :components]) {
+        // Do something additional if needed
+    }
+    return activity;
+}
+
++ (BOOL)canPlacesActivityHandleArticle:(NSUserActivity *)activity :(NSURLComponents *)components {
+    BOOL isArticleUrlPresent = NO;
     NSURL *articleURL = nil;
     for (NSURLQueryItem *item in components.queryItems) {
         if ([item.name isEqualToString:@"WMFArticleURL"]) {
             NSString *articleURLString = item.value;
             articleURL = [NSURL URLWithString:articleURLString];
+            activity.webpageURL = articleURL;
+            isArticleUrlPresent = YES;
             break;
         }
     }
-    NSUserActivity *activity = [self wmf_pageActivityWithName:@"Places"];
-    activity.webpageURL = articleURL;
-    return activity;
+    return isArticleUrlPresent;
+}
+
++ (BOOL)canPlacesActivityHandleLocation:(NSUserActivity *)activity :(NSURLComponents *)components {
+    BOOL isLongitudePresent = NO;
+    BOOL isLatitudePresent = NO;
+    BOOL isPlacePresent = NO;
+    for (NSURLQueryItem *item in components.queryItems) {
+        if ([item.name isEqualToString:@"latitude"]) {
+            [activity addUserInfoEntriesFromDictionary:@{@"latitude": item.value}];
+            isLatitudePresent = YES;
+        } else if ([item.name isEqualToString:@"longitude"]) {
+            [activity addUserInfoEntriesFromDictionary:@{@"longitude": item.value}];
+            isLongitudePresent = YES;
+        } else if ([item.name isEqualToString:@"place"]) {
+            [activity addUserInfoEntriesFromDictionary:@{@"place": item.value}];
+            isPlacePresent = YES;
+        }
+    }
+    return (isLongitudePresent && isLatitudePresent) || isPlacePresent;
 }
 
 + (instancetype)wmf_exploreViewActivity {

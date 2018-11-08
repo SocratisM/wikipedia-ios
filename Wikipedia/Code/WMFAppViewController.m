@@ -1103,12 +1103,15 @@ static const NSString *kvo_SavedArticlesFetcher_progress = @"kvo_SavedArticlesFe
             [self setSelectedIndex:WMFAppTabTypePlaces];
             [self.navigationController popToRootViewControllerAnimated:animated];
             NSURL *articleURL = activity.wmf_articleURL;
+            NSDictionary * locationInfo = activity.userInfo;
+            // For "View on a map" action to succeed, view mode has to be set to map.
+            [[self placesViewController] updateViewModeToMap];
             if (articleURL) {
-                // For "View on a map" action to succeed, view mode has to be set to map.
-                [[self placesViewController] updateViewModeToMap];
                 [[self placesViewController] showArticleURL:articleURL];
-            }
-        } break;
+            } else if (locationInfo) {
+                [[self placesViewController] showLocation: locationInfo];
+            } break;
+        }
         case WMFUserActivityTypeContent: {
             [self setSelectedIndex:WMFAppTabTypeMain];
             UINavigationController *navController = self.navigationController;

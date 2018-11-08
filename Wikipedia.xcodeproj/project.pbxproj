@@ -95,6 +95,11 @@
 		19A175F095F5197BA20EA8BA /* NSUserActivity+WMFExtensionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A172FA6AE61E76FCEF4259 /* NSUserActivity+WMFExtensionsTest.m */; };
 		19A17B36FFB48307FF04C07F /* SavedPageSpotlightManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A171644189467D5A195AE3 /* SavedPageSpotlightManagerTest.m */; };
 		3F82AD8D20690C8C00156E29 /* EditSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82AD8C20690C8C00156E29 /* EditSummaryViewController.swift */; };
+		71DE0ED52194645C00BF8C16 /* PlacesViewController+ReceiveLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE0ED42194645C00BF8C16 /* PlacesViewController+ReceiveLocations.swift */; };
+		71DE0ED62194645C00BF8C16 /* PlacesViewController+ReceiveLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE0ED42194645C00BF8C16 /* PlacesViewController+ReceiveLocations.swift */; };
+		71DE0ED72194645C00BF8C16 /* PlacesViewController+ReceiveLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE0ED42194645C00BF8C16 /* PlacesViewController+ReceiveLocations.swift */; };
+		71DE0ED82194645C00BF8C16 /* PlacesViewController+ReceiveLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE0ED42194645C00BF8C16 /* PlacesViewController+ReceiveLocations.swift */; };
+		71DE0ED92194645C00BF8C16 /* PlacesViewController+ReceiveLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE0ED42194645C00BF8C16 /* PlacesViewController+ReceiveLocations.swift */; };
 		7A00D177208FB72900A9C7BA /* BatchEditToolbarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A00D16C208FB61200A9C7BA /* BatchEditToolbarViewController.xib */; };
 		7A0161B41FE85C6000AEDC3D /* ReadingListsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0161B31FE85C6000AEDC3D /* ReadingListsCollectionViewCell.swift */; };
 		7A0161B51FE85C6000AEDC3D /* ReadingListsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0161B31FE85C6000AEDC3D /* ReadingListsCollectionViewCell.swift */; };
@@ -3264,6 +3269,7 @@
 		19A171644189467D5A195AE3 /* SavedPageSpotlightManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedPageSpotlightManagerTest.m; sourceTree = "<group>"; };
 		19A172FA6AE61E76FCEF4259 /* NSUserActivity+WMFExtensionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserActivity+WMFExtensionsTest.m"; sourceTree = "<group>"; };
 		3F82AD8C20690C8C00156E29 /* EditSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSummaryViewController.swift; sourceTree = "<group>"; };
+		71DE0ED42194645C00BF8C16 /* PlacesViewController+ReceiveLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlacesViewController+ReceiveLocations.swift"; sourceTree = "<group>"; };
 		7616D4941C5A67D20077ADF7 /* WMFUtilityMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMFUtilityMacros.h; sourceTree = "<group>"; };
 		7A00D16C208FB61200A9C7BA /* BatchEditToolbarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BatchEditToolbarViewController.xib; sourceTree = "<group>"; };
 		7A00E0BF20A9E54400F033C8 /* SettingsFunnel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFunnel.swift; sourceTree = "<group>"; };
@@ -7921,6 +7927,7 @@
 				D82117F91EE587650076C040 /* Mapbox+Extensions.swift */,
 				D8703DCE1EE8B27A001A4BAB /* mapstyle.json */,
 				D87233FF1E1FF0A500751E83 /* PlacesViewController.swift */,
+				71DE0ED42194645C00BF8C16 /* PlacesViewController+ReceiveLocations.swift */,
 				D88C70171EE595E90022A26A /* MapView.swift */,
 				D82117FB1EE58C080076C040 /* MapAnnotation.swift */,
 				D88FCAE01E4B776600505A9F /* MapUtilities.swift */,
@@ -10150,6 +10157,7 @@
 				D8E27BA11F82B38100F9D2B3 /* RMessageView.m in Sources */,
 				B0C6BE481E428C940033BD6E /* WMFAccountCreator.swift in Sources */,
 				7ABAD6B420338CFB006A364C /* ReadingListDetailUnderBarViewController.swift in Sources */,
+				71DE0ED52194645C00BF8C16 /* PlacesViewController+ReceiveLocations.swift in Sources */,
 				B066F0D51E513DAA00A199F8 /* UIViewController+WMFHideKeyboard.swift in Sources */,
 				7A998ABB1FE201AB007FE06E /* SavedArticlesViewController.swift in Sources */,
 				832289DB1F7291BA0081A5FB /* SizeThatFitsReusableView.swift in Sources */,
@@ -10591,6 +10599,7 @@
 				D80ED3861EE57F4800CE8C50 /* UIImage+WMFFocalImageDrawing.m in Sources */,
 				D80ED3871EE57F4800CE8C50 /* NSAttributedString+WMFModify.m in Sources */,
 				D82117FA1EE587650076C040 /* Mapbox+Extensions.swift in Sources */,
+				71DE0ED92194645C00BF8C16 /* PlacesViewController+ReceiveLocations.swift in Sources */,
 				D80ED3881EE57F4800CE8C50 /* WMFSettingsViewController.m in Sources */,
 				83FBE9791F6181E00026C7EB /* ShareAFactActivityImageItemProvider.swift in Sources */,
 				83836ED01F615E5B007D1A05 /* ShareViewController.swift in Sources */,
@@ -11153,6 +11162,7 @@
 				D8E27BA41F82B38200F9D2B3 /* RMessageView.m in Sources */,
 				83FBE9721F6172ED0026C7EB /* ShareAFactActivityTextItemProvider.swift in Sources */,
 				7ABAD6B720338CFB006A364C /* ReadingListDetailUnderBarViewController.swift in Sources */,
+				71DE0ED82194645C00BF8C16 /* PlacesViewController+ReceiveLocations.swift in Sources */,
 				7A19C64B20DD3440000EF7F7 /* BaseExploreFeedSettingsViewController.swift in Sources */,
 				7A998ABE1FE201AB007FE06E /* SavedArticlesViewController.swift in Sources */,
 				832289DE1F7291BA0081A5FB /* SizeThatFitsReusableView.swift in Sources */,
@@ -11594,6 +11604,7 @@
 				B0F929A01F84789D002A0788 /* WMFWelcomeInitialViewController.swift in Sources */,
 				D8CE25F01E698E2400DAE2E0 /* WMFAccountCreationViewController.swift in Sources */,
 				D8CE25F11E698E2400DAE2E0 /* UIImage+WMFFocalImageDrawing.m in Sources */,
+				71DE0ED62194645C00BF8C16 /* PlacesViewController+ReceiveLocations.swift in Sources */,
 				D8CE25F31E698E2400DAE2E0 /* NSAttributedString+WMFModify.m in Sources */,
 				D8CE25F41E698E2400DAE2E0 /* WMFSettingsViewController.m in Sources */,
 				D8CE25F61E698E2400DAE2E0 /* UIScrollView+WMFContentOffsetUtils.m in Sources */,
@@ -11922,6 +11933,7 @@
 				D8EC3EEB1E9BDA35006712EB /* WMFImageGalleryViewController.m in Sources */,
 				D8EC3EEF1E9BDA35006712EB /* WMFAccountCreationViewController.swift in Sources */,
 				D8EC3EF01E9BDA35006712EB /* UIImage+WMFFocalImageDrawing.m in Sources */,
+				71DE0ED72194645C00BF8C16 /* PlacesViewController+ReceiveLocations.swift in Sources */,
 				83FBE9771F6181E00026C7EB /* ShareAFactActivityImageItemProvider.swift in Sources */,
 				83836ECE1F615E5B007D1A05 /* ShareViewController.swift in Sources */,
 				D8EC3EF21E9BDA35006712EB /* NSAttributedString+WMFModify.m in Sources */,
